@@ -13,19 +13,24 @@
 </template>
 
 <script>
-  import { ref } from 'vue';
+  import { reactive, ref } from 'vue';
 
 export default {
 
   setup(){
-      const goal = ref('master vue')
+  const goal = ref('master vue')
 
   const aims = ref({
     goal: 'eat Vue'
   })
-  const moreGoals = 
+  const moreGoals = reactive({
+      goal: 'drink vue'
+  }) 
       function changeGoal(){
-          goal.value = 'Live and Breath Vue'
+      goal.value = 'Live and Breath Vue'
+      goal.value = aims.value.goal
+      goal.value = moreGoals.goal
+
       }
 
 return {
