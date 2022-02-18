@@ -13,31 +13,44 @@
 </template>
 
 <script>
-  import { reactive, ref } from 'vue';
+  // import { reactive, ref } from 'vue';
 
 export default {
 
-  setup(){
-  const goal = ref('master vue')
+//   setup(){
+//   const goal = ref('master vue')
 
-  const aims = ref({
-    goal: 'eat Vue'
-  })
-  const moreGoals = reactive({
-      goal: 'drink vue'
-  }) 
-      function changeGoal(){
-      goal.value = 'Live and Breath Vue'
-      goal.value = aims.value.goal
-      goal.value = moreGoals.goal
+//   const aims = ref({
+//     goal: 'eat Vue'
+//   })
+//   const moreGoals = reactive({
+//       goal: 'drink vue'
+//   }) 
+//       function changeGoal(){
+//       goal.value = 'Live and Breath Vue'
+//       goal.value = aims.value.goal
+//       goal.value = moreGoals.goal
 
-      }
+//       }
 
-return {
-courseGoal: goal,
-toggleGoal: changeGoal
-}
+// return {
+// courseGoal: goal,
+// toggleGoal: changeGoal
+// }
+//   }
+
+data(){
+  return {
+    courseGoal: 'Vue Mastery'
   }
+},
+
+methods: {
+  toggleGoal(){
+    this.courseGoal = 'Vue kno'
+  }
+}
+
 }
 </script>
 
